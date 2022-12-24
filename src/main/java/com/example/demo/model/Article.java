@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -39,7 +40,6 @@ public class Article extends AbstractEntity {
      @Column( name= "photo")
      private String photo ;
      
-     @OneToMany
      @JoinColumn(name="idcategory")
      private Category category;
 	 

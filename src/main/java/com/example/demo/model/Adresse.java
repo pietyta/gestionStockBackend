@@ -1,6 +1,5 @@
 package com.example.demo.model;
  
-import java.time.Instant;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -18,18 +17,23 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper =true)
 @Entity
-@Table(name="commandeClient")
-public class CommandeClient extends AbstractEntity{
+public class Adresse extends AbstractEntity{
 
-	 @Column( name= "code")
-	 private String code;
+	 @Column( name= "addresse1")
+	 private String addresse1;
 	 
-	 @Column( name= "datecommande")
-	 private Instant dateCommande;
+	 @Column( name= "addresse2")
+	 private String addresse2;
 	 
-	 @Column( name= "idclient")
-	 private String client;
+	 @Column( name= "ville")
+	 private String ville;
 	 
-	 @OneToMany(mappedBy = "commandeClient")
-	 private List<LigneCommandeClient> LigneCommandeClients;
+	 @Column( name= "codepostale")
+	 private String CodePostale;
+	 
+	 @Column( name= "pays")
+	 private String pays;
+	 
+	 @OneToMany(mappedBy= "client")
+	 private List<CommandeClient> commandeClients;
 }

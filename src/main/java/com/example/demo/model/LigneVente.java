@@ -1,6 +1,8 @@
 package com.example.demo.model;
  
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -16,4 +18,8 @@ import lombok.NoArgsConstructor;
 @Table(name="ligneVente")
 public class LigneVente extends AbstractEntity{
 
+	   @ManyToOne
+	   @JoinColumn(name="idVente")
+		private Ventes vente;
+		
 }

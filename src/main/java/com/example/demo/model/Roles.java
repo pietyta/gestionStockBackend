@@ -15,5 +15,5 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="roles")
 public class Roles extends AbstractEntity{
-
+	private String nom;
 }

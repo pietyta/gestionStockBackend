@@ -1,5 +1,8 @@
 package com.example.demo.model;
  
+import java.math.BigDecimal;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -22,4 +25,6 @@ public class LigneVente extends AbstractEntity{
 	   @JoinColumn(name="idVente")
 		private Ventes vente;
 		
+        @Column(name="quantite")
+		private BigDecimal quantite;
 }
